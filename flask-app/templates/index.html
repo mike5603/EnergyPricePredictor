@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Energy Price Predictor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  {% block head %} {% endblock head %}
+</head>
+  <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Energy Price Predictor</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="Features">Features</a></li>
+      <li><a href='Data'>Data Sources</a></li>
+    </ul>
+  </div>
+</nav>
+  {% block content %}
+  <form id='input' method='post' action='/'  style='margin-top:50px'>
+    <h2>Select Region or Company</h2>
+    <p> For more information on regions and companies, see the <a href='/about'>About</a> page.</p>
+    <p> Weather information is obtained for each call and may take a couple of minutes to process</p>
+    <p> Models are trained on data from 2017-2018, and thus absolute prices will not be accurate in the current economic and social environment</p>
+    <select name="region" id="region">
+    <option value="NP15">NP15</option>
+    <option value="SP15">SP15</option>
+    <option value="ZP26">ZP26</option>
+    <option value="PGAE">PGAE</option>
+    <option value="SCE">SCE</option>
+    <option value="SDGE">SDGE</option>
+    <option value="VEA">VEA</option>
+  </select>
+  <input type='submit' value='Submit'>
+  </form>
+  {% endblock content %}
+  {% block plot %} {% endblock plot %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

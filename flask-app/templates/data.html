@@ -1,0 +1,19 @@
+<!doctype html>
+{% extends 'index.html' %}
+
+  {% block content %}
+    <div class="container" style='margin-top:50px'>
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h3>Pricing Data</h3>
+            <p>Historical energy prices were obtained from the <a href='http://www.caiso.com/market/Pages/ReportsBulletins/ReportsBulletinsArchive/Default.aspx'> California Independent System Operator</a>. Data was obtained for 2017 and 2018 in the Daily market watch reports archive section.</p>
+          <h3>Historical Weather Data</h3>
+            <p>Historical weather data was obtained using the <a href='https://www.ncdc.noaa.gov/cdo-web/webservices/v2#data'>NOAA api</a></p>
+          <h3>Power Plant Capacities</h3>
+            <p>The energy capacities for different energy generation methods were obtained from the <a href='https://ww2.energy.ca.gov/almanac/electricity_data/web_qfer/source_files/'>California Energy Comssion</a> from the q WebWorks QFERGeneratorMonthlyDescriptive Table.txt page.</p>
+          <h3>Weather Forcasts</h3>
+            <p>Weather forcasts were obtained from the <a href='https://www.weather.gov/documentation/services-web-api'> National Weather Service api</a></p>
+        </div>
+      </div>
+    </div>
+  {% endblock content %}

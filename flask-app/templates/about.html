@@ -1,0 +1,25 @@
+<!doctype html>
+{% extends 'index.html' %}
+
+  {% block content %}
+    <div class="container" style='margin-top:50px'>
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h1>About</h1>
+            <p>Energy Price Predictor uses historical energy prices and weather to predict future energy prices for both the Day Ahead and Real Time Markets of the 
+            <a href='http://www.caiso.com/Pages/default.aspx'> California Independent System Operator (ISO)</a></p>
+          <h3>Regions</h3>
+            <p>Energy Price Predictor can predict prices for three regions, NP15, SP15 and ZP26 as illustrated below</p>
+            <img src="{{url_for('static', filename='California_regions.png')}}" align="middle" />
+          <h3>Companies</h3>
+            <p>Additionally, Energy Price Predictor can predict prices for the following utility companies:
+             <ul>
+               <li><a target="_blank" href="https://www.pge.com/">Pacific Gas and Electric (PGAE)</a></li>
+               <li><a target="_blank" href="https://www.sce.com">Southern California Edison (SCE)</a></li>
+               <li><a target="_blank" href="https://www.sdge.com/">San Diego Gas and Electric (SDGE)</a></li>
+               <li><a target="_blank" href="https://vea.coop/">Valley Electric Association, Inc (VEA)</a></li>
+             </ul>   
+        </div>
+      </div>
+    </div>
+  {% endblock content %}

@@ -1,0 +1,25 @@
+<!doctype html>
+{% extends 'index.html' %}
+
+  {% block content %}
+    <div class="container" style='margin-top:50px'>
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h1>Temporal Features</h1>
+          <h3>Day of Week</h3>
+            <p>The industrial sector accounts for 32% of energy usage, with transportation and commercial accounting for another 46%. During the standard working week, many more factories are in production and thus significantly more energy is being consumed. This can lead to higher energy prices during the week than on the weekends. </p>
+            <img src="{{url_for('static', filename='DayoftheWeek.png')}}" align='middle' />
+          <h3>Month of the Year</h3>
+            <p>Energy prices are also dependent on the month of the year. The lowest prices occur in thte spring when production of energy sources such as solar is high, and the temperatures are reasonable. In the winter, production of energy is lower leading to higher prices and in the summer, temperatures are higher leading to more energy usage on air conditioning.</p>
+            <img src="{{url_for('static', filename='MonthoftheYear.png')}}" align="middle" />
+          <h1>Weather Features</h1>
+          <h3>Temperature</h3>
+            <p>Energy prices have a slighty quadratic dependence on the average temperature, with a minimum around 65 degress. Similar to the month of the year, it is possible that lower temperatures correspond to times where renewable energy sources are less productive and higher temperatures correspond to times where more energy is used on air conditioning</p>
+            <img src="{{url_for('static', filename='Temperature.png')}}" align="middle" />
+          <h3>Wind Speeds</h3>
+            <p>Energy prices also have a slight dependence on wind speeds, with higher wind speeds corresponding to lower energy prices. This is most likely due to higher production from wind turbines.</p>
+            <img src="{{url_for('static', filename='Wind.png')}}" align="middle" />
+        </div>
+      </div>
+    </div>
+  {% endblock content %}
